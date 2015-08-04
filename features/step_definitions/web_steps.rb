@@ -48,6 +48,12 @@ When /^(?:|I )fill in "([^\"]*)" for "([^\"]*)"(?: within "([^\"]*)")?$/ do |val
   end
 end
 
+When(/^I fill in visitor with name$/) do |visitor, name|
+  with_scope(selector) do
+    fill_in(visitor, :with => name)
+  end
+end
+
 # Use this to fill in an entire form with data from a table. Example:
 #
 #   When I fill in the following:

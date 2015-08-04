@@ -1,0 +1,14 @@
+<div>
+  <form action="/register">
+    What's your name?
+    <input id = 'name', type='text', name='name'>
+    <input type='submit', value='Submit'>
+  </form>
+  	<% if @visitor != ''%>
+  	Registration Successful
+    <a href="/game">Go to game</a>
+  	<%= @visitor %>
+    <% else %>
+    Please enter your name
+  	<% end %>
+</div>

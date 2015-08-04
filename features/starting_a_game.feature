@@ -5,11 +5,30 @@ Feature: Starting the game
 
 Scenario: Registering
   Given I am on the homepage
-  When I follow "New Game"
+  When I follow "Register"
   Then I should see "What's your name?"
 
 
 Scenario: Creating a new game
-  Given I follow "New Game"
-  When I enter my name
-  Then I should start a new game
+  Given I am on "Register"
+  When I fill in "name" with "gaby"
+  Then I press "Submit"
+  Then I should see "Registration Successful"
+
+  Given I am on "Register"
+  When I fill in "name" with ""
+  Then I press "Submit"
+  Then I should see "Please enter your name"
+
+  Given I am on "Register"
+  When I fill in "name" with "gaby"
+  Then I press "Submit"
+  Then I should see "Go to game"
+
+  Given I am on "Register"
+  When I follow "Go to game"
+  Then I should be on "/game"
+
+
+
+
