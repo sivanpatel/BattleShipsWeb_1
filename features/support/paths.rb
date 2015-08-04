@@ -13,8 +13,11 @@ module NavigationHelpers
     when /the home\s?page/
       '/'
 
-    when /New Game/
-      '/New_Game'
+    when /Register/
+      '/register'
+
+    when /game/
+      '/game'
 
 
     # Add more mappings here.
