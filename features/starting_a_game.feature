@@ -9,6 +9,7 @@ Scenario: Registering
   Then I should see "What's your name?"
 
 Scenario: Creating a new game
-  Given I follow "New Game"
-  When I enter my name
-  Then I should start a new game
+  Given I am on "New Game"
+  When I fill in "name" with "gaby"
+  Then I press "Submit"
+  Then I should see "Registration Successful"

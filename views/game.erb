@@ -1,7 +1,11 @@
 <div>
-  <form action="/game">
+  <form action="/New_Game">
     What's your name?
-    <input type='text', name='name'>
+    <input id = 'name', type='text', name='name'>
     <input type='submit', value='Submit'>
   </form>
+  	<% if @visitor %>
+  	Registration Successful
+  	<%= @visitor %>
+  	<% end %>
 </div>
