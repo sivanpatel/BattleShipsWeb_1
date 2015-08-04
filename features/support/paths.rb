@@ -14,10 +14,10 @@ module NavigationHelpers
       '/'
 
     when /Register/
-      '/register'
+      '/game'
 
     when /game/
-      '/game'
+      '/game/new'
 
 
     # Add more mappings here.

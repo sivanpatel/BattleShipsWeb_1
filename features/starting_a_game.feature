@@ -13,12 +13,12 @@ Scenario: Creating a new game
   Given I am on "Register"
   When I fill in "name" with "gaby"
   Then I press "Submit"
-  Then I should see "Registration Successful"
+  Then I should see "Registration successful"
 
   Given I am on "Register"
   When I fill in "name" with ""
   Then I press "Submit"
-  Then I should see "Please enter your name"
+  Then I should see "What's your name?"
 
   Given I am on "Register"
   When I fill in "name" with "gaby"
@@ -26,9 +26,7 @@ Scenario: Creating a new game
   Then I should see "Go to game"
 
   Given I am on "Register"
-  When I follow "Go to game"
-  Then I should be on "/game"
-
-
-
-
+  When I fill in "name" with "gaby"
+  Then I press "Submit"
+  Then I follow "Go to game"
+  Then I should be on "/game/new"
